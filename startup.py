@@ -59,7 +59,9 @@ assets_exist = questionary.confirm(
 ).ask()
 if assets_exist:
     assets = questionary.path(
-        "Where is this directory located?", default=str(project_directory), only_directories=True
+        "Where is this directory located?",
+        default=str(project_directory),
+        only_directories=True,
     ).ask()
     assets_files = list(p for p in Path(assets).rglob("*") if p.is_file())
     questionary.print(f"{len(assets_files)} asset files found.")
@@ -136,7 +138,13 @@ output_path = Path(project_directory) / "project.yml"
 srsly.write_yaml(output_path, project_yaml)
 with output_path.open("a") as output_yaml:
     output_yaml.write("\n")
-    output_yaml.write("\n# This project.yml generated with https://github.com/pmbaumgartner/spacy-v3-project-startup")
-    output_yaml.write("\n# For more on spaCy projects, see: https://spacy.io/usage/projects and https://spacy.io/api/cli#project")
-    output_yaml.write("\n# And see the templates at: https://github.com/explosion/projects")
+    output_yaml.write(
+        "\n# This project.yml generated with https://github.com/pmbaumgartner/spacy-v3-project-startup"
+    )
+    output_yaml.write(
+        "\n# For more on spaCy projects, see: https://spacy.io/usage/projects and https://spacy.io/api/cli#project"
+    )
+    output_yaml.write(
+        "\n# And see the templates at: https://github.com/explosion/projects"
+    )
 questionary.print(f"Project yml output to {output_path}.")
