@@ -1,6 +1,6 @@
-# spaCy v3 Project Startup / Transfer
+# spaCy v3 Project Startup / Transfer / Migration
 
-This tool will walk you through creating a simple `project.yml` file for use with [spaCy projects](https://spacy.io/usage/projects).
+This tool will walk you through creating a simple `project.yml` file for use with [spaCy projects](https://spacy.io/usage/projects). Optionally it will create the relevant project attributes given an existing folder structure.
 
 Note that there are already many excellent templates for starting a project at https://github.com/explosion/projects.  These will probably be what you need most of the time. If one of those fits your need, use them! They contain helpful comments on how the different aspects of the project file works.
 
