@@ -1,0 +1,2 @@
+questionary==1.9.0
+srsly==2.4.0
