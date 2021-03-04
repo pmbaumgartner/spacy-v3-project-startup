@@ -108,6 +108,12 @@ if var_example:
     project_vars = {"example": "example1", "other_example": "another-example"}
     project_yaml["vars"] = project_vars
 
+remote_example = questionary.confirm(
+    "Would you like to add an example remote storage? (For pushing/pulling workflow output)"
+).ask()
+if remote_example:
+    remote_vars = {"default": "s3://my-spacy-bucket", "local": "/mnt/scratch/cache"}
+    project_yaml["remotes"] = remote_vars
 
 command_example = questionary.confirm("Would you like to add example commands?").ask()
 if command_example:
